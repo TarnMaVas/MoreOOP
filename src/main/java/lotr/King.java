@@ -1,18 +1,13 @@
 package lotr;
 
-import java.util.Random;
-
-import lotr.Character;
-import lotr.kickstrategy.NobleKick;
-
-public class King extends Character {
+public class King extends Noble {
     
-    public King() {
-        super(new Random().nextInt(5, 15), new Random().nextInt(5, 15), new NobleKick());
+    static {
+    lower_bound = 5;
+    upper_bound = 15;
     }
 
-    @Override
-    public void kick(Character c) {
-        getKickStrategy().kick(this, c);
+    public King() {
+        super();
     }
 }
